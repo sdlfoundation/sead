@@ -1,6 +1,9 @@
 #ifndef SEAD_TYPES_H_
 #define SEAD_TYPES_H_
 
+#include <sdl-utils/Types.h>
+
+/*
 #ifdef cafe
 
 #include <cstddef>
@@ -30,13 +33,15 @@ typedef sintptr  intptr_t;
     #define TOKENPASTE(x, y) x ## y
     #define TOKENPASTE2(x, y) TOKENPASTE(x, y)
 
-    #define static_assert(condition, ...) typedef int TOKENPASTE2(static_assert_, __LINE__)[(condition) ? 1 : -1]
-#endif // static_assert
+    #define static_assert(condition, ...) typedef int
+TOKENPASTE2(static_assert_, __LINE__)[(condition) ? 1 : -1] #endif //
+static_assert
 
 #else
 
 #error "Unknown platform"
 
 #endif // cafe
+*/
 
 #endif // SEAD_TYPES_H_
