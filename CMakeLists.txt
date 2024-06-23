@@ -22,4 +22,4 @@ target_link_libraries(Sead sdl-utils)
 target_include_directories(Sead PRIVATE ${CMAKE_CURRENT_SOURCE_DIR}/engine/library/include)
 add_subdirectory(${CMAKE_CURRENT_SOURCE_DIR}/engine/library/modules)
 
-target_compile_definitions(Sead PRIVATE cafe)
+target_compile_definitions(Sead PRIVATE cafe NOT_HAVE_QUADMATH)
