@@ -1,7 +1,7 @@
 #ifndef SEAD_TEXTURE_CAFE_GX2_H_
 #define SEAD_TEXTURE_CAFE_GX2_H_
 
-#include <wut_prelude.h>
+#include <wut.h>
 
 #include <gfx/seadTexture.h>
 #include <prim/seadRuntimeTypeInfo.h>

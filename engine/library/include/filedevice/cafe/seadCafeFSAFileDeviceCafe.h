@@ -1,7 +1,7 @@
 #ifndef SEAD_CAFE_FSA_FILEDEVICE_H_
 #define SEAD_CAFE_FSA_FILEDEVICE_H_
 
-#include <wut_prelude.h>
+#include <wut.h>
 
 #include <filedevice/seadFileDevice.h>
 #include <prim/seadRuntimeTypeInfo.h>

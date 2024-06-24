@@ -2,7 +2,7 @@
 
 #ifdef cafe
 
-#include <wut_prelude.h>
+#include <wut.h>
 #include <ppc_ps.h>
 
 inline f32x2& tof32x2(f32& x)

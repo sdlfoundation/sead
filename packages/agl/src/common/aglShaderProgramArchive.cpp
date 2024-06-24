@@ -5,7 +5,7 @@
 #include <time/seadTickTime.h>
 
 #ifdef cafe
-#include <wut_prelude.h>
+#include <wut.h>
 #endif // cafe
 
 namespace {

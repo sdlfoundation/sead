@@ -1,4 +1,4 @@
-#include <wut_prelude.h>
+#include <wut.h>
 
 #include <filedevice/cafe/seadCafeFSAFileDeviceCafe.h>
 #include <filedevice/seadFileDevice.h>

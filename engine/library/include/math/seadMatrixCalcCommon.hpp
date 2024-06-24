@@ -1,7 +1,7 @@
 #pragma once
 
 #ifdef cafe
-#include <wut_prelude.h>
+#include <wut.h>
 #endif // cafe
 
 #include <math/seadMathCalcCommon.h>

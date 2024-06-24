@@ -1,5 +1,5 @@
 #ifdef cafe
-#include <wut_prelude.h>
+#include <wut.h>
 #include <nn/save.h>
 #endif // cafe
 

@@ -58,7 +58,7 @@ protected:
   void initStackCheck_();
   virtual u32 *getStackCheckStartAddress_() const;
 #ifdef cafe
-  static void wut_prelude.hreadFunc_(void *);
+  static void wut.hreadFunc_(void *);
 #endif // cafe
 
 public:

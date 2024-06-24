@@ -4,7 +4,7 @@
 #include <gfx/seadPrimitiveRendererBase.h>
 #include <gfx/seadPrimitiveRendererUtil.h>
 
-#include <wut_prelude.h>
+#include <wut.h>
 
 namespace sead {
 

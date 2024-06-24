@@ -2,7 +2,7 @@
 #define SEAD_CRITICAL_SECTION_H_
 
 #ifdef cafe
-#include <wut_prelude.h>
+#include <wut.h>
 #endif // cafe
 
 #include <heap/seadDisposer.h>
