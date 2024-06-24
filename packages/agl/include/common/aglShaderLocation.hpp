@@ -3,7 +3,7 @@
 // TODO: Move to the proper header
 #define SEAD_MACRO_UTIL_ROUNDUP(x, y) ((x) + ((y) - 1) & ~((y) - 1))
 
-#include <cafe/gx2.h>
+#include "wut/gx2.h>
 
 namespace agl {
 

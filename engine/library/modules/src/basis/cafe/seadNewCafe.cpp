@@ -4,7 +4,7 @@
 #include <heap/seadHeap.h>
 #include <heap/seadHeapMgr.h>
 
-#include <cafe.h>
+#include <wut_prelude.h>
 
 void* operator new(size_t size)
 {

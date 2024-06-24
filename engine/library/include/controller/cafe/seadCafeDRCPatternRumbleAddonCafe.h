@@ -4,31 +4,31 @@
 #include <controller/seadPatternRumbleAddon.h>
 #include <time/seadTickTime.h>
 
-#include <cafe/vpad.h>
+#include "wut/vpad.h"
 
 namespace sead {
 
 class CafeDRCController;
 
-class CafeDRCPatternRumbleAddon : public PatternRumbleAddon
-{
-    SEAD_RTTI_OVERRIDE(CafeDRCPatternRumbleAddon, PatternRumbleAddon)
+class CafeDRCPatternRumbleAddon : public PatternRumbleAddon {
+  SEAD_RTTI_OVERRIDE(CafeDRCPatternRumbleAddon, PatternRumbleAddon)
 
 public:
-    CafeDRCPatternRumbleAddon(CafeDRCController* controller);
-    virtual ~CafeDRCPatternRumbleAddon() { }
+  CafeDRCPatternRumbleAddon(CafeDRCController *controller);
+  virtual ~CafeDRCPatternRumbleAddon() {}
 
-    virtual bool calc();
+  virtual bool calc();
 
 private:
-    virtual void startRumbleImpl_();
-    virtual void stopRumbleImpl_();
+  virtual void startRumbleImpl_();
+  virtual void stopRumbleImpl_();
 
-    u8 mPatternBuf[VPAD_MOTOR_PATTERN_SIZE_MAX];
-    u32 mPatternLength;
-    TickTime mEndTime;
+  u8 mPatternBuf[VPAD_MOTOR_PATTERN_SIZE_MAX];
+  u32 mPatternLength;
+  TickTime mEndTime;
 };
-static_assert(sizeof(CafeDRCPatternRumbleAddon) == 0x40, "sead::CafeDRCPatternRumbleAddon size mismatch");
+static_assert(sizeof(CafeDRCPatternRumbleAddon) == 0x40,
+              "sead::CafeDRCPatternRumbleAddon size mismatch");
 
 } // namespace sead
 

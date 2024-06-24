@@ -3,7 +3,7 @@
 #include <heap/seadHeap.h>
 
 #ifdef cafe
-#include <cafe.h>
+#include <wut_prelude.h>
 #endif // cafe
 
 namespace agl {

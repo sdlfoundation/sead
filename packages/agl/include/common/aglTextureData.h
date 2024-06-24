@@ -3,7 +3,7 @@
 #include <common/aglTextureEnum.h>
 #include <math/seadMathCalcCommon.h>
 
-#include <cafe/gx2.h>
+#include "wut/gx2.h>
 
 namespace agl {
 

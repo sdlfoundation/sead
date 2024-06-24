@@ -2,40 +2,33 @@
 #define SEAD_TICK_TIME_H_
 
 #ifdef cafe
-#include <cafe/os.h>
+#include "wut/os.h"
 #endif // cafe
 
 #include <time/seadTickSpan.h>
 
 namespace sead {
 
-class TickTime
-{
+class TickTime {
 public:
-    TickTime();
+  TickTime();
 
 #ifdef cafe
-    void setNow()
-    {
-        mTick = OSGetSystemTime();
-    }
+  void setNow() { mTick = OSGetSystemTime(); }
 #else
-    void setNow();
+  void setNow();
 #endif
 
-    TickSpan diff(TickTime t) const;
-    TickSpan diffToNow() const;
+  TickSpan diff(TickTime t) const;
+  TickSpan diffToNow() const;
 
-    TickTime& operator+=(TickSpan rhs);
-    TickTime& operator-=(TickSpan rhs);
+  TickTime &operator+=(TickSpan rhs);
+  TickTime &operator-=(TickSpan rhs);
 
-    u64 toU64() const
-    {
-        return mTick;
-    }
+  u64 toU64() const { return mTick; }
 
 private:
-    u64 mTick;
+  u64 mTick;
 };
 
 TickSpan operator-(TickTime lhs, TickTime rhs);
@@ -43,6 +36,6 @@ TickSpan operator-(TickTime lhs, TickTime rhs);
 TickTime operator+(TickTime time, TickSpan span);
 TickTime operator-(TickTime time, TickSpan span);
 
-}  // namespace sead
+} // namespace sead
 
 #endif // SEAD_TICK_TIME_H_

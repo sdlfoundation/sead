@@ -3,7 +3,7 @@
 #include <common/aglVertexEnum.h>
 #include <container/seadSafeArray.h>
 
-#include <cafe/gx2.h>
+#include "wut/gx2.h>
 
 namespace agl {
 

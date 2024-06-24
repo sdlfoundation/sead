@@ -3,40 +3,37 @@
 
 #include <controller/seadControlDevice.h>
 
-#include <cafe/vpad.h>
+#include "wut/vpad.h"
 
 namespace sead {
 
-class CafeVPadDevice : public ControlDevice
-{
-    SEAD_RTTI_OVERRIDE(CafeVPadDevice, ControlDevice)
+class CafeVPadDevice : public ControlDevice {
+  SEAD_RTTI_OVERRIDE(CafeVPadDevice, ControlDevice)
 
 public:
-    struct VPadInfo
-    {
-        VPadInfo();
+  struct VPadInfo {
+    VPadInfo();
 
-        VPADStatus status[VPAD_MAX_READ_BUFS];
-        s32 last_read_length;
-        s32 last_read_error;
-    };
-    static_assert(sizeof(VPadInfo) == 0xAC8, "sead::CafeVPadDevice::VPadInfo size mismatch");
+    VPADStatus status[VPAD_MAX_READ_BUFS];
+    s32 last_read_length;
+    s32 last_read_error;
+  };
+  static_assert(sizeof(VPadInfo) == 0xAC8,
+                "sead::CafeVPadDevice::VPadInfo size mismatch");
 
 public:
-    CafeVPadDevice(ControllerMgr* mgr);
-    virtual ~CafeVPadDevice();
+  CafeVPadDevice(ControllerMgr *mgr);
+  virtual ~CafeVPadDevice();
 
-    virtual void calc();
+  virtual void calc();
 
-    const VPadInfo& getVPadInfo() const
-    {
-        return mVPadInfo;
-    }
+  const VPadInfo &getVPadInfo() const { return mVPadInfo; }
 
 private:
-    VPadInfo mVPadInfo;
+  VPadInfo mVPadInfo;
 };
-static_assert(sizeof(CafeVPadDevice) == 0xADC, "sead::CafeVPadDevice size mismatch");
+static_assert(sizeof(CafeVPadDevice) == 0xADC,
+              "sead::CafeVPadDevice size mismatch");
 
 } // namespace sead
 

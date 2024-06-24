@@ -5,7 +5,7 @@
 #include <prim/seadEndian.h>
 
 #ifdef cafe
-#include <cafe/gx2.h>
+#include "wut/gx2.h>
 #endif // cafe
 
 static inline void swap32(void* ptr, size_t size)

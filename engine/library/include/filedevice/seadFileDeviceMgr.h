@@ -2,7 +2,7 @@
 #define SEAD_FILEDEVICEMGR_H_
 
 #ifdef cafe
-#include <cafe.h>
+#include <wut_prelude.h>
 #endif // cafe
 
 #include <container/seadTList.h>

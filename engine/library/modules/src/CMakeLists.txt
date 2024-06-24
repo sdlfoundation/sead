@@ -1,7 +1,8 @@
 add_subdirectory(basis)
 add_subdirectory(codec)
 add_subdirectory(container)
-add_subdirectory(controller)
+# TODO
+#add_subdirectory(controller)
 add_subdirectory(filedevice)
 add_subdirectory(framework)
 add_subdirectory(gfx)

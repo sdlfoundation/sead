@@ -2,7 +2,7 @@
 
 #include <prim/seadPtrUtil.h>
 
-#include <cafe.h>
+#include <wut_prelude.h>
 
 #include <cstring>
 

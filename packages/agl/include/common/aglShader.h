@@ -3,7 +3,7 @@
 #include <common/aglShaderEnum.h>
 
 #ifdef cafe
-#include <cafe/gx2.h>
+#include "wut/gx2.h>
 #endif // cafe
 
 namespace agl {

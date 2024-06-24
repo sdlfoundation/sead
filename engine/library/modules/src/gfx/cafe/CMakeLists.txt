@@ -1,4 +1,5 @@
 target_sources(Sead PRIVATE
-    ${CMAKE_CURRENT_SOURCE_DIR}/seadPrimitiveRendererCafe.cpp
+    # TODO
+    #${CMAKE_CURRENT_SOURCE_DIR}/seadPrimitiveRendererCafe.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/seadTextureCafeGX2.cpp
 )

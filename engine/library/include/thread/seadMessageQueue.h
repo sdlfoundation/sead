@@ -4,42 +4,40 @@
 #include <basis/seadTypes.h>
 
 #ifdef cafe
-#include <cafe/os/OSMessage.h>
+#include "wut/os.h"
 #endif // cafe
 
 namespace sead {
 
 class Heap;
 
-class MessageQueue
-{
+class MessageQueue {
 public:
-    enum BlockType
-    {
-        cBlock = 0,
-        cNoBlock = 1,
-    };
+  enum BlockType {
+    cBlock = 0,
+    cNoBlock = 1,
+  };
 
-    typedef s32 Element;
+  typedef s32 Element;
 
-    static const Element cNullElement;
+  static const Element cNullElement;
 
 public:
-    MessageQueue();
-    ~MessageQueue();
+  MessageQueue();
+  ~MessageQueue();
 
-    void allocate(s32 size, Heap* heap);
-    void free();
+  void allocate(s32 size, Heap *heap);
+  void free();
 
-    bool push(Element message, BlockType blockType);
-    Element pop(BlockType blockType);
-    Element peek(BlockType blockType) const;
-    bool jam(Element message, BlockType blockType);
+  bool push(Element message, BlockType blockType);
+  Element pop(BlockType blockType);
+  Element peek(BlockType blockType) const;
+  bool jam(Element message, BlockType blockType);
 
 protected:
 #ifdef cafe
-    Element* mBuffer;
-    OSMessageQueue mMessageQueueInner;
+  Element *mBuffer;
+  OSMessageQueue mMessageQueueInner;
 #else
 #error "Unsupported platform"
 #endif
